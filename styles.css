@@ -1,0 +1,115 @@
+*{
+    font-family: 'Poor Story';
+}
+
+body {
+    background-color: lightgray;
+}
+
+#navigation {
+    position: absolute;
+    top: 0;
+    right: 0; /* 우측에 배치 */
+}
+
+#navigation ul {
+    margin: 30px; /*위치 조절*/
+    padding: 5px; /*위치 조절*/
+}
+
+#navigation ul li {
+    display: inline-block; /* 모든 메뉴를 가로로 배열 */
+    margin-right: 20px; /* 각 메뉴 아이템 사이의 간격 조절 */
+}
+
+#navigation ul li a {
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+
+#navigation ul li a:hover {
+    background-color: pink; /*배경색 지정*/
+    font-weight: bold; /*텍스트 진하게*/
+    color: white; /*글자 색상 변경*/
+}
+
+#hobbyAndDream {
+    display: flex;
+}
+
+#hobby,
+#dream {
+    flex-direction: row; /* 가로로 배치 */
+    margin-right: 30px; /* 오른쪽 여백 추가 */
+}
+
+#timetable table{
+    border: 1px solid whitesmoke;
+}
+
+#timetable thead {
+    background-color: pink;
+}
+
+#timetable tbody {
+    background-color: lightblue;
+}
+
+#timetable tbody tr td:hover {
+    background-color:cornflowerblue;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#songs {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 50px; 
+}
+
+#songs img {
+    position: absolute;
+    animation: none;
+    top: 30px;
+    bottom: 50px;
+}
+
+#songs img:first-child {
+    z-index: 1;
+}
+
+#songs img:nth-child(2) {
+    opacity: 0;
+    z-index: 2;
+}
+
+#songs:hover img:nth-child(2) {
+    animation: fadeInOut 1s;
+    opacity: 1;
+}
+
+#songs p {
+    position: relative;
+    bottom: -40px; 
+    left: 0; 
+    right: 0; 
+}
+
+@keyframes shake {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-1px); }
+    50% { transform: translateY(1px); }
+    75% { transform: translateY(-1px); }
+    100% { transform: translateY(0); }
+  }
+  
+  #introduction h2 {
+    color:deeppink;
+    animation: shake 2s infinite;
+  }
+  
